@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.com/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean
+		class="com.springcoretraining.constructorInjection.Certificate"
+		name="certiRef">
+		<constructor-arg value="Android using Kotlin" />
+	</bean>
+
+	<bean class="com.springcoretraining.constructorInjection.Person"
+		name="person">
+		<constructor-arg value="Akshay" />
+		<constructor-arg value="189301019" type="int" /><!-- Here 
+			type can be avoided since there is only a single constructor in class Person 
+			but if there is a possibility of ambiguity, then it is necessary to provide 
+			a type -->
+		<constructor-arg ref="certiRef" />
+		<constructor-arg>
+			<list>
+				<value>Python programming</value>
+				<value>Get started with GO</value>
+				<value>Machine Learning</value>
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>
