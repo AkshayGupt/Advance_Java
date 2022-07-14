@@ -30,4 +30,10 @@
 			</list>
 		</constructor-arg>
 	</bean>
+
+	<bean class="com.springcoretraining.constructorInjection.Addition"
+		name="addition">
+		<constructor-arg value="12" type="int" index="0" />
+		<constructor-arg value="34" type="int" index="1" />
+	</bean>
 </beans>

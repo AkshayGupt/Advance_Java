@@ -9,5 +9,9 @@ public class Test {
 				"com/springcoretraining/constructorInjection/config-constructorInjection.xml");
 		Person p1 = (Person) context.getBean("person");
 		System.out.println(p1);
+
+		// Addition
+		Addition add = (Addition) context.getBean("addition");
+		add.doSum();
 	}
 }
