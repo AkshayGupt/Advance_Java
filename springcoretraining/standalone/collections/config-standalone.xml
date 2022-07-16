@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd
+ 	http://www.springframework.org/schema/util
+ 	http://www.springframework.org/schema/util/spring-util.xsd
+ 	">
+
+	<!-- Stand-alone list -->
+	<util:list list-class="java.util.Vector" id="mybestfriends">
+		<value>Rohit</value>
+		<value>Djay</value>
+		<value>Maddy</value>
+	</util:list>
+	<!-- Stand-alone map -->
+	<util:map map-class="java.util.TreeMap" id="fee-structure">
+		<entry key="Spring Framework" value="800" />
+		<entry key="Python" value="500" />
+		<entry key="Core Java" value="200" />
+	</util:map>
+	<!-- Stand-alone properties -->
+	<util:properties id="db-config">
+		<prop key="driver">com.mysql.jdbc.Driver</prop>
+		<prop key="username">myUsername</prop>
+		<prop key="password">myPassword</prop>
+		<prop key="url">mysql:jdbc://localhost:3306/database</prop>
+	</util:properties>
+
+	<!-- Bean -->
+	<bean class="com.springcoretraining.standalone.collections.Person"
+		name="person1">
+		<property name="friends">
+			<ref bean="mybestfriends" />
+		</property>
+		<property name="fee">
+			<ref bean="fee-structure" />
+		</property>
+		<property name="props">
+			<ref bean="db-config" />
+		</property>
+	</bean>
+</beans>
