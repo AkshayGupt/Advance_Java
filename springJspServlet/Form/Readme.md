@@ -1,6 +1,6 @@
 # FORM
 
-### Using HttpServlet
+### Using HttpServlet (doPost method)
 
-![picture alt](/images/form.png "Registration Form")
-![picture alt](/images/RegisterServlet.png "RegisterServlet")
+![Registration Form](images/form.png "Registration Form")
+![RegisterServlet](images/RegisterServlet.png "RegisterServlet")
