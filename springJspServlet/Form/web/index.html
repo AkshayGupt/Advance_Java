@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Form Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container{
+                width:40%;
+                border:1px solid black;
+                margin:auto;
+                padding:30px;
+                font-size: 20px;
+            }
+
+            #register-form table tr td input {
+                font-size:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2 style="border-bottom:2px solid black"> Registration Form </h2>
+            <form id="register-form" action="register" method="post">
+                <table>
+                    <tr>
+                        <td>Enter Name: </td>
+                        <td><input required name="username" type="text" placeholder="enter your name"/></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Password: </td>
+                        <td><input required name="password" type="password" placeholder="enter your password"/></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Email: </td>
+                        <td><input required name="email" type="email" placeholder="abc@xyz.com"/></td>
+                    </tr>
+                    <tr>
+                        <td>Select Gender: </td>
+                        <td><input required name="gender" type="radio" value="Male">Male &nbsp; &nbsp; <input type="radio" name="gender" value="female"> Female </td>
+                    </tr>
+                    <tr>
+                        <td>Select course: </td>
+                        <td>
+                            <select name="course">
+                                <option value="python">Python</option>
+                                <option value="core-java">Core Java</option>
+                                <option value="advance-java">Advance Java</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <input type="checkbox" name="termsAndConditions" value="checked" />
+                        </td>
+                        <td>
+                            I agree to terms and conditions.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit"> Register </button>
+                            <button type="reset"> Reset </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
